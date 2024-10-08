@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div class="container">
+        <div class="theme-toggle">
+            <button id="toggle-theme">Switch to Dark Mode</button>
+        </div>
+
+      
+        <section class="converter-section">
+            <h1>Currency Converter</h1>
+            <div class="converter-form">
+                <div class="amount-input">
+                    <label for="amount">Enter Amount</label>
+                    <input type="number" id="amount" placeholder="Amount">
+                </div>
+                
+                <div class="currency-selectors">
+                    <label for="fromCurrency">From</label>
+                    <select id="fromCurrency">
+                        <option value="GBP">British Pound Sterling (GBP)</option>
+                        <option value="USD">US Dollar (USD)</option>
+                        <option value="EUR">Euro (EUR)</option>
+                        <option value="BRL">Brazilian Real (BRL)</option>
+                        <option value="JPY">Japanese Yen (JPY)</option>
+                        <option value="TRY">Turkish Lira (TRY)</option>
+                        <option value="NPR">Nepalese Rupee (NPR)</option>
+                    </select>
+
+                    <label for="toCurrency">To</label>
+                    <select id="toCurrency">
+                        <option value="GBP">British Pound Sterling (GBP)</option>
+                        <option value="USD">US Dollar (USD)</option>
+                        <option value="EUR">Euro (EUR)</option>
+                        <option value="BRL">Brazilian Real (BRL)</option>
+                        <option value="JPY">Japanese Yen (JPY)</option>
+                        <option value="TRY">Turkish Lira (TRY)</option>
+                        <option value="NPR">Nepalese Rupee (NPR)</option>
+                    </select>
+                </div>
+
+                <button class="convert-button" onclick="convertCurrency()">Convert</button>
+            </div>
+
+            <div class="conversion-result">
+                <h3>Conversion Result:</h3>
+                <div id="result"></div>
+            </div>
+        </section>
+
+       
+        <section class="history-section">
+            <h2>Conversion History</h2>
+            <div id="history"></div>
+            <button onclick="clearHistory()">Clear History</button>
+        </section>
+
+       
+
+    <script src="java.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
